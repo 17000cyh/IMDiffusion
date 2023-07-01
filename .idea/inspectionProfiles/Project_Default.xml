@@ -1,0 +1,45 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <value>
+          <list size="22">
+            <item index="0" class="java.lang.String" itemvalue="tokenizers" />
+            <item index="1" class="java.lang.String" itemvalue="embeddings" />
+            <item index="2" class="java.lang.String" itemvalue="DeepSpeech" />
+            <item index="3" class="java.lang.String" itemvalue="transformers" />
+            <item index="4" class="java.lang.String" itemvalue="dataclasses" />
+            <item index="5" class="java.lang.String" itemvalue="python-Levenshtein" />
+            <item index="6" class="java.lang.String" itemvalue="scikit-learn" />
+            <item index="7" class="java.lang.String" itemvalue="unidecode" />
+            <item index="8" class="java.lang.String" itemvalue="allennlp" />
+            <item index="9" class="java.lang.String" itemvalue="torch" />
+            <item index="10" class="java.lang.String" itemvalue="pydub" />
+            <item index="11" class="java.lang.String" itemvalue="overrides" />
+            <item index="12" class="java.lang.String" itemvalue="simplejson" />
+            <item index="13" class="java.lang.String" itemvalue="pytorch-pretrained-bert" />
+            <item index="14" class="java.lang.String" itemvalue="spacy" />
+            <item index="15" class="java.lang.String" itemvalue="tensorboardX" />
+            <item index="16" class="java.lang.String" itemvalue="quadprog" />
+            <item index="17" class="java.lang.String" itemvalue="visdom" />
+            <item index="18" class="java.lang.String" itemvalue="gtts" />
+            <item index="19" class="java.lang.String" itemvalue="checksumdir" />
+            <item index="20" class="java.lang.String" itemvalue="fuzzywuzzy" />
+            <item index="21" class="java.lang.String" itemvalue="json_lines" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N803" />
+          <option value="N806" />
+          <option value="N802" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
