@@ -223,10 +223,29 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset_name", type=str, default="SMD")
-    parser.add_argument("--compute_sum", type=str, default="True")
-    parser.add_argument("--compute_abs", type=str, default="True")
+    # parser.add_argument("--compute_sum", type=str, default="True")
+    # parser.add_argument("--compute_abs", type=str, default="True")
+
 
     args = parser.parse_args()
+    data_id = args.dataset_name
+    if data_id == "MSL":
+        args.compute_abs = True
+        args.compute_sum = True
+    if data_id == "PSM":
+        args.compute_abs = True
+        args.compute_sum = False
+    if data_id == "SMAP":
+        args.compute_abs = True
+        args.compute_sum = True
+    if data_id == "SWaT":
+        args.compute_abs = True
+        args.compute_sum = True
+
+    if data_id == "SMD":
+        args.compute_abs = True
+        args.compute_sum = False
+        
     dataset_name = args.dataset_name
     if dataset_name == "SMD":
         subset_name_list = [f"machine-1-{i}" for i in range(1, 9)]

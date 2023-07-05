@@ -25,6 +25,7 @@ parser.add_argument("--epochs",type=int,default=100)
 parser.add_argument("--diffusion_step",type=int,default=50)
 parser.add_argument("--machine_number",type=int,default=1)
 parser.add_argument("--file",type=str)
+parser.add_argument('--dataset',type=str,default="SMD")
 args = parser.parse_args()
 
 
@@ -96,7 +97,20 @@ for iteration in os.listdir("train_result"):
         config["train"]["epochs"] = args.epochs
         print(json.dumps(config, indent=4))
 
-        model = CSDI_Physio(config, args.device, target_dim=38, ratio=args.ratio).to(args.device)
+        if args.dataset == "SMD":
+            feature_dim = 38
+        elif args.dataset == "PSM":
+            feature_dim = 25
+        elif args.dataset == "MSL":
+            feature_dim = 55
+        elif args.dataset == "SMAP":
+            feature_dim = 25
+        elif args.dataset == "GCP":
+            feature_dim = 19
+        elif args.dataset == "SWaT":
+            feature_dim = 45
+
+        model = CSDI_Physio(config, args.device, target_dim=feature_dim, ratio=args.ratio).to(args.device)
         base_folder = f"train_result/{iteration}/{subset_name}"
 
         model.load_state_dict(torch.load(f"{base_folder}/best-model.pth",map_location=args.device))

@@ -330,15 +330,6 @@ def compute_one_strategy(data_id,strategy_name,ensemble_strategy_list,csv_writer
             average = iter_result_tensor.mean(0).tolist()
             f_std = torch.std(iter_result_tensor[:, 0])
             csv_writer.writerow([f"average for {machine_number}"] + average)
-            # csv_writer.writerow(average)
-            # csv_writer.writerow(['std'])
-            # csv_writer.writerow(
-            #     iter_result_tensor.std(0).tolist()
-            # )
-            # csv_writer.writerow([])
-            # csv_writer.writerow([])
-            # csv_writer.writerow([])
-            # csv_writer.writerow([])
 
     elif data_id == "GCP":
         machine_number_list = [f"service{i}" for i in range(0, 30)]
@@ -419,15 +410,17 @@ def compute_one_strategy(data_id,strategy_name,ensemble_strategy_list,csv_writer
         average = iter_result_tensor.mean(0).tolist()
         f_std = torch.std(iter_result_tensor[:,0])
         csv_writer.writerow(['average'])
+        csv_writer.writerow(
+            ['p','r','f1','add']
+        )
         csv_writer.writerow(average )
         csv_writer.writerow(['std'])
         csv_writer.writerow(
+            ['p', 'r', 'f1', 'add']
+        )
+        csv_writer.writerow(
             iter_result_tensor.std(0).tolist()
         )
-        csv_writer.writerow([])
-        csv_writer.writerow([])
-        csv_writer.writerow([])
-        csv_writer.writerow([])
 
 
 def compute_one_data(data_id):
