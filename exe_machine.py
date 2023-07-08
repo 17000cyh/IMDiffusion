@@ -91,8 +91,8 @@ for training_epoch in range(0,6):
                     print(json.dumps(config, indent=4))
 
                     foldername = f"./train_result/save{training_epoch}/" + f"{train_data_path.replace('_train.pkl', '').replace('data/Machine/', '')}" + "_unconditional:" + str(
-                        args.unconditional) + "_split:" + str(
-                        split) + "_diffusion_step:" + str(args.diffusion_step) + "/"
+                        unconditional) + "_split:" + str(
+                        split) + "_diffusion_step:" + str(diffusion_step) + "/"
                     print('model folder:', foldername)
                     os.makedirs(foldername)
                     with open(foldername + "config.json", "w") as f:

@@ -173,31 +173,31 @@ def compute_residual(pk_file, labels, ground_truth, compute_sum, compute_abs):
 
 def compute_one_subset_one_strategy(dataset_name, subset_name, compute_sum, compute_abs):
     residual_list = []
-    for save_file in os.listdir(f"iter_{dataset_name}/window_result"):
+    for save_file in os.listdir(f"window_result"):
         if "save" in save_file:
             pass
         else:
             continue
 
         try:
-            os.listdir(f"iter_{dataset_name}/window_result/{save_file}/50")
+            os.listdir(f"window_result/{save_file}/50")
         except:
             continue
-        for subdata_name in os.listdir(f"iter_{dataset_name}/window_result/{save_file}/50"):
+        for subdata_name in os.listdir(f"window_result/{save_file}/50"):
             if subset_name + "_" in subdata_name:
                 pass
             else:
                 continue
 
-            base_path = f"iter_{dataset_name}/window_result/{save_file}/50/{subdata_name}"
+            base_path = f"window_result/{save_file}/50/{subdata_name}"
             for pkl_path in os.listdir(base_path):
                 if ".pk" in pkl_path:
                     # 记得每次都要读取，否则它会按照地址进行修改
                     labels = pickle.load(
-                        open(f"iter_{dataset_name}/data/Machine/{subset_name}_test_label.pkl", "rb")
+                        open(f"data/Machine/{subset_name}_test_label.pkl", "rb")
                     )
                     ground_truth = pickle.load(
-                        open(f"iter_{dataset_name}/data/Machine/{subset_name}_test.pkl", "rb")
+                        open(f"data/Machine/{subset_name}_test.pkl", "rb")
                     )
 
                     pkl_file = pickle.load(

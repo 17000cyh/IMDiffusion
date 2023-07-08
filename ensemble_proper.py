@@ -122,7 +122,7 @@ def merge(pkl_path,data_id,machine_number = ""):
     # print(f"shape of all gen is {all_gen_middle.shape}")
     all_gen_middle = torch.cat([head_middle, all_gen_middle], dim=1)
 
-    if data_id == "SMD":
+    if data_id == "SMD" or data_id == "GCP":
         print(f"machine number is {machine_number}")
         label = pickle.load(
             open(f"data/Machine/{machine_number}_test_label.pkl", "rb")
@@ -180,7 +180,7 @@ def compute_residual(prediction, all_target,compute_abs=True,compute_sum=True):
 
 
 def ensemble(pkl_path, data_id, ensemble_strategy_list = [],last_step_threshold = 0.02,compute_abs=True,compute_sum=True,machine_number=""):
-    if data_id == "SMD":
+    if data_id == "SMD" or data_id == "GCP":
         all_gen_middle, label, all_target = merge(pkl_path, data_id,machine_number=machine_number)
     else:
         all_gen_middle, label, all_target = merge(pkl_path,data_id)
@@ -272,7 +272,7 @@ def compute_one_strategy(data_id,strategy_name,ensemble_strategy_list,csv_writer
         compute_abs = True
         compute_sum = True
 
-    if data_id == "SMD":
+    if data_id == "SMD" or data_id == "GCP":
         compute_abs = True
         compute_sum = False
 
