@@ -113,7 +113,20 @@ for training_epoch in range(0,6):
                     print(test_data_path)
                     print(label_data_path)
 
-                    model = CSDI_Physio(config, args.device,target_dim=38,ratio = args.ratio).to(args.device)
+                    if args.dataset == "SMD":
+                        feature_dim = 38
+                    elif args.dataset == "SMAP" or args.datset == "PSM":
+                        feature_dim = 25
+                    elif args.dataset == "MSL":
+                        feature_dim = 55
+                    elif args.dataset == "SWaT":
+                        feature_dim = 45
+
+                    elif args.dataset == "GCP":
+                        feature_dim = 19
+
+
+                    model = CSDI_Physio(config, args.device,target_dim=feature_dim,ratio = args.ratio).to(args.device)
 
                     train(
                         model,
