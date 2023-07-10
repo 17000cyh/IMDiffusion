@@ -8,7 +8,8 @@ The main results are presented in the following table. Our method outperforms th
 ![Image Description](result.png)
 
 # Data
-To use the data mentioned in our paper, please unzip Machine.zip in file data. The data of SWaT has not been uploaded, and you need to apply for it and perform data preprocessing.
+To use the data mentioned in our paper, firstly download Machine.zip from https://drive.google.com/file/d/1VX5P60gS6fIJ_XDvnlF6M5fwJbWxwkNI/view?usp=sharing and put it in /data.
+Please unzip Machine.zip in data. The data of SWaT has not been uploaded, and you need to apply by its official tutorial.
 
 To use new dataset, please:
 
@@ -66,4 +67,13 @@ you can check the result in ensemble_residual, we use a csv file to record avera
 | 0.01279164 | 0.01456169 | 0.00622323 | 17.4200802 |
 
 
+If you use this work, please cite using the following bibtex entry.
 
+```markdown
+@article{chen2023imdiffusion,
+title={ImDiffusion: Imputed Diffusion Models for Multivariate Time Series Anomaly Detection},
+author={Chen, Yuhang and Zhang, Chaoyun and Ma, Minghua and Liu, Yudong and Ding, Ruomeng and Li, Bowen and He, Shilin and Rajmohan, Saravan and Lin, Qingwei and Zhang, Dongmei},
+journal={arXiv preprint arXiv:2307.00754},
+year={2023}
+}
+```

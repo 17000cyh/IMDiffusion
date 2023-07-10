@@ -229,6 +229,11 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
     data_id = args.dataset_name
+
+    # for default setting
+    args.compute_abs = True
+    args.compute_sum = True
+
     if data_id == "MSL":
         args.compute_abs = True
         args.compute_sum = True
@@ -245,6 +250,8 @@ if __name__ == "__main__":
     if data_id == "SMD":
         args.compute_abs = True
         args.compute_sum = False
+
+
         
     dataset_name = args.dataset_name
     if dataset_name == "SMD":

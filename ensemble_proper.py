@@ -259,6 +259,10 @@ def ensemble(pkl_path, data_id, ensemble_strategy_list = [],last_step_threshold 
 def compute_one_strategy(data_id,strategy_name,ensemble_strategy_list,csv_writer,last_step_threshold=0.02):
     print(f"ensemble for {data_id} in {strategy_name} ...")
     csv_writer.writerow([data_id,strategy_name])
+    # for default setting
+    compute_abs = True
+    compute_sum = True
+
     if data_id == "MSL":
         compute_abs = True
         compute_sum = True
