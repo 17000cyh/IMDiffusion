@@ -35,7 +35,7 @@ python evaluate_machine_window_middle.py --device cuda:0 --dataset SMD
 
 command to perform inference.
 
-After inference, if you want to compute score, you should:
+After inference, if you want to compute score, there are two scripts for compute score: compute_score.py and ensemble_proper.py.
 
 compute_score.py is used to calculate the score of each dataset at each threshold. For individual data such as SWaT, SMAP, MSL, and PSM that do not contain sub datasets, you do not need to run this code.
 
