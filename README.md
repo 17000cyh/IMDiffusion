@@ -25,7 +25,7 @@ To reproduce the results mentioned in our paper, first, make sure you have torch
 python exe_machine.py --device cuda:0 --dataset SMD
 ```
 
-To obtain the average performance of the model, we run six times on a dataset. You can modify this parameter according to your needs.
+To obtain the average performance of the model, we run six times for one dataset. You can modify this parameter according to your needs.
 
 After completing the training, you can use the
 

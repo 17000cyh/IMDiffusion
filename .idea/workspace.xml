@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75c934cb-8f5f-4789-b27e-9fe3dc9fa32e" name="Changes" comment="upload dataset">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="75c934cb-8f5f-4789-b27e-9fe3dc9fa32e" name="Changes" comment="upload dataset" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +102,7 @@
       <workItem from="1688564397860" duration="9706000" />
       <workItem from="1688801947764" duration="7179000" />
       <workItem from="1688916750936" duration="3574000" />
-      <workItem from="1688983178337" duration="1991000" />
+      <workItem from="1688983178337" duration="2174000" />
     </task>
     <task id="LOCAL-00001" summary="upload dataset">
       <created>1688916633635</created>
