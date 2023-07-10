@@ -53,7 +53,7 @@ python ensemble_proper.py --dataset_name SMD
 else if you want to compute score for PSM, SWaT, MSL and SMAP, just use:
 
 ```shell
-python ensemble_proper.py --dataset_name PSM
+python ensemble_proper.py --dataset_name SWaT
 ```
 
 you can check the result in ensemble_residual, we use a csv file to record average score, for example:
